@@ -503,3 +503,59 @@ footer .player .p-right .time-bar {
     background-color: #ADFF2F;
 }
 
+@media screen and (max-width: 600px) {
+    main nav {
+        width: 50px;
+    }
+
+    main .content {
+        width: calc(100% - 50px);
+    }
+
+    main nav .nav-top #logo {
+        display: none;
+    }
+
+    main nav .nav-top #logo-small {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    main nav .nav-top .nav-playlist {
+        display: none;
+    }
+
+    main nav .nav-top .nav-main span {
+        display: none;
+    }
+
+    main nav .nav-top .nav-main ul li:first-child,
+    main nav .nav-top .nav-main ul li {
+        border-left: none;
+        padding: 5px 0;
+    }
+
+    main nav .nav-main {
+        display: flex;
+        justify-content: center;
+    }
+
+    main nav .nav-bottom {
+        padding: 0;
+    }
+
+    main nav .nav-bottom span {
+        display: none;
+    }
+
+    main nav .nav-bottom .install-app,
+    main nav .nav-bottom .user-profile {
+        border-bottom: none;
+        justify-content: center;
+    }
+
+    main .content .upgrade {
+        width: calc(100% - 50px);
+    }
+}
