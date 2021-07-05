@@ -4,15 +4,230 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify Web</title>
 </head>
 <body class="debug">
-    <div class="w clearfix">
+    <div class="corp">
 
         <!-- inizio main -->
         <main>
-            <nav class="Panel flex fx col"></nav>
+            <nav class="height-1">
+                <div class="nav-top flex f-column">
+                    <div id="logo">
+                        <img src="img/logo.svg" alt="Spotify Logo">
+                    </div>
+
+                    <div id="logo-small">
+                        <img src="img/logo-small.svg" alt="Logo small">
+                    </div>
+
+                    <div class="nav-main">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="img/home.svg" alt="home">
+                                    <span class="bianco">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/search.svg" alt="search">
+                                    <span>Cerca</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="img/libreria.svg" alt="libreria">
+                                    <span>La tua libreria</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-playlist">
+                        <h3>Playlist</h3>
+                        <a href="">
+                            <span id="add-playlist">+</span>
+                            <span>Crea Playlist</span>
+                        </a>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-bottom">
+                    <div class="nav-user">
+                        <div class="install-app flex align-center">
+                            <img src="img/download.svg" alt="Download Icon">
+                            <span>Installa app</span>
+                        </div>
+                        <div class="user-profile flex align-center">
+                            <img src="img/profile.svg" alt="Profile Image">
+                            <span class="white">John Doe</span>
+                        </div>
+                    </div>
+            </nav>
+
+            <div class="content height-1">
+                <div class="upgrade">
+                    <button id="upgrade-btn">Effetua l'upgrade</button>
+                </div>
+                <div class="wrapper">
+                    <div class="nav-content">
+                        <ul class="nav-content-list flex center f-wrap padding-b30">
+                            <li>In evidenza</li>
+                            <li>Podcast</li>
+                            <li>Classifiche</li>
+                            <li>Generi e mood</li>
+                            <li>Nuove uscite</li>
+                            <li>Scopri</li>
+                        </ul>
+                    </div>
+
+                    <div class="albums">
+                        <h2 class="padding-b30">Recently played</h2>
+
+                        <ul class="albums-list flex f-wrap padding-b30">
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/metal_lifting.jpg" alt="Heavy Metal">
+                                </div>
+                                <h4>Heavy Metal</h4>
+                                <span>subtitle</span>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/stranger.jpeg" alt="Stranger Things">
+                                </div>
+                                <h4>Stranger Things</h4>
+                                <span>Kyle Dixon & Michael Stein</span>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/aquietplace.jpeg" alt="A Quiet Place">
+                                </div>
+                                <h4>A quiet place</h4>
+                                <span>subtitle</span>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/split.jpeg" alt="Split">
+                                </div>
+                                <h4>Split</h4>
+                                <span>subtitle</span>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/cure.jpeg" alt="Cure">
+                                </div>
+                                <h4>A cure for wellness</h4>
+                                <span>subtitle</span>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/sinister.jpeg" alt="Sinister">
+                                </div>
+                                <h4>Sinister</h4>
+                                <span>subtitle</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="albums">
+                        <h2>Creato per John Doe</h2>
+                        <span>Più ascolti, più accurati saranno i suggerimenti</span>
+                        <ul class="albums-list flex f-wrap padding-t30 padding-b30">
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/radar.jpeg" alt="Radar">
+                                </div>
+                                <h4>Release Radar</h4>
+                            </li>
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/mixdaily.jpeg" alt="Daily Mix">
+                                </div>
+                                <h4>Daily mix 1</h4>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="albums">
+                        <h2>Artisti più popolari</h2>
+                        <span>Più ascolti, più accurati saranno i suggerimenti</span>
+                        <ul class="albums-list flex f-wrap padding-t30">
+                            <li>
+                                <div class="album-img">
+                                    <div class="layover circle-img">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img class="circle-img" src="img/youg.jpeg" alt="Lana del Rey">
+                                </div>
+                                <h4>Lana del Rey</h4>
+                            </li>
+                            <li class="circle-img">
+                                <div class="album-img">
+                                    <div class="layover circle-img">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img class="circle-img" src="img/einaudi.jpeg" alt="Einaudi">
+                                </div>
+                                <h4>Ludovico Einaudi</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     
