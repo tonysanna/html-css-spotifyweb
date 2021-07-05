@@ -42,6 +42,10 @@ body {
     justify-content: space-between;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .f-wrap {
     flex-wrap: wrap;
 }
@@ -71,6 +75,13 @@ main {
     height: calc(100% - 90px);
 }
 
+main .content {
+    float: left;
+    width: calc(100% - 230px);
+    background-color: #141922;
+    overflow: auto;
+}
+
 main nav {
     float: left;
     width: 230px;
@@ -81,7 +92,7 @@ main nav {
 
 main .nav-top {
     min-height: 370px;
-    height: calc(100% - 80px);
+    height: calc(100% - 90px);
     overflow: hidden;
 }
 
@@ -109,7 +120,6 @@ main nav .nav-top .nav-main ul li {
 }
 
 main nav .nav-top a {
-    display: flex;
     align-items: center;
     color: #808080;
     text-decoration: none;
@@ -117,10 +127,15 @@ main nav .nav-top a {
     line-height: 30px;
 }
 
+nav .nav-top .nav-main span {
+    vertical-align: middle;
+}
+
 nav .nav-top .nav-main img {
-    width: 23px;
+    width: 25px;
     filter: invert(0.2);
     margin-right: 5px;
+    vertical-align: middle;
 }
 
 nav .nav-top .nav-main ul li:first-child {
@@ -171,6 +186,12 @@ nav .nav-bottom .install-app {
     filter: invert(0.3);
 }
 
+nav .nav-bottom .install-app a {
+    text-decoration: none;
+    color: inherit;
+    line-height: 20px;
+}
+
 nav .nav-bottom .install-app img {
     width: 15px;
     margin-right: 10px;
@@ -196,21 +217,22 @@ nav .nav-bottom .install-app:hover img {
 }
 
 main .content .wrapper {
-    padding: 100px 10px 20px;
+    padding: 100px 20px 20px;
     color: white;
+    
 }
 
 main .content .upgrade {
     position: fixed;
     width: calc(100% - 230px);
-    height: 80px;
+    height: 90px;
     background-color: rgba(0, 0, 0, 0.5);
-    line-height: 80px;
+    line-height: 90px;
     text-align: right;
 }
 
 main .content .upgrade #upgrade-btn{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     text-transform: uppercase;
     color: white;
     border: 1px solid white;
@@ -219,6 +241,10 @@ main .content .upgrade #upgrade-btn{
     font-size: 12px;
     cursor: pointer;
     margin-right: 20px;
+}
+
+main .content .upgrade #upgrade-btn:hover {
+    transform: scale(1.1);
 }
 
 main .content .wrapper .nav-content .nav-content-list li {
@@ -230,6 +256,21 @@ main .content .wrapper .nav-content .nav-content-list li {
 
 main .content .wrapper .nav-content .nav-content-list li:hover {
     color: white;
+}
+
+main .content .wrapper .nav-content .nav-content-list .hot{
+    position: relative;
+}
+
+main .content .wrapper .nav-content .nav-content-list .hot:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #ADFF2F;
 }
    
 main .content .wrapper .albums > h2 {
@@ -260,13 +301,13 @@ main .content .wrapper span {
 
 @media screen and (max-width: 1100px) {
     .content .wrapper .albums .albums-list li {
-        width: 25%;
+        width: calc((100% / 4) - 10px);
     }
 }
 
 @media screen and (max-width: 700px) {
     .content .wrapper .albums .albums-list li {
-        width: 50%;
+        width: calc((100% / 2) - 10px);
     }
 }
 
@@ -301,3 +342,164 @@ main .content .wrapper span {
 .content .wrapper .albums .albums-list .circle-img {
     border-radius: 50%;
 }
+
+footer {
+    width: 100%;
+    height: 90px;
+    background-color: #242424
+}
+
+footer .player {
+    width: 100%;
+    height: 100%;
+}
+
+footer .p-left {
+    width: 230px;
+    height: 100%;
+}
+
+footer .p-center {
+    width: 40%;
+    height: 100%;
+}
+
+footer .p-right {
+    width: 230px;
+    height: 100%;
+}
+
+.player .p-left {
+    color: #808080;
+    font-size: 14px;
+}
+
+footer .player .p-left .item img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.player .p-left .item i {
+    padding: 0 5px;
+}
+
+footer .player .p-left .item h5:hover,
+footer .player .p-left .item h6:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer .player .p-left .item i:hover {
+    color: white;
+}
+
+.player .p-center {
+    color: white;
+    font-size: 10px;
+}
+
+.row-top {
+    height: 60%;
+}
+
+.row-top i {
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.row-bottom {
+    width: 100%;
+}
+
+footer .player #player-btn {
+    font-size: 30px;
+}
+
+footer .player .p-center .row-bottom .bar {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer .player .p-center .row-bottom .bar .time-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #BABABA;
+}
+
+footer .player .p-center .row-top #player-btn:hover {
+    transform: scale(1.1);
+}
+
+.player .p-center .row-bottom .bar .bar-btn {
+    position: absolute;
+    top: -4px;
+    left: 18%;
+    display: none;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.player .p-center .row-bottom .bar:hover .bar-btn {
+    display: block;
+}
+
+.player .p-center .row-bottom .bar:hover .time-bar {
+    background-color: #ADFF2F;
+}
+
+.player .p-right {
+    color: white;
+    font-size: 14px;
+}
+
+footer .player .p-right .bar {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 3px;
+    background-color: #535353;
+    border-radius: 10px;
+}
+
+footer .player .p-right .time-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    background-color: #BABABA;
+}
+
+.player .p-right .bar .bar-btn {
+    position: absolute;
+    top: -4px;
+    left: 18%;
+    display: none;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.player .p-right .bar:hover .bar-btn {
+    display: block;
+}
+
+.player .p-right .bar:hover .time-bar {
+    background-color: #ADFF2F;
+}
+
